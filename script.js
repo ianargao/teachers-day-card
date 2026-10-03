@@ -135,6 +135,54 @@ function toggle(open) {
 
 
 // ------------------------------------
+// PAGE VISIBILITY
+// ------------------------------------
+
+document.addEventListener("visibilitychange", () => {
+
+  if (document.hidden) {
+
+    // Pause music when the page is hidden.
+    // This happens when switching tabs,
+    // switching apps, opening Messenger,
+    // or locking the phone.
+
+    bgMusic.pause();
+
+  } else {
+
+    // Resume music when returning to the page,
+    // but only if the card is still open.
+
+    if (card.classList.contains("open")) {
+
+      bgMusic.play().catch(() => {
+        // Browser may require another user interaction.
+      });
+
+    }
+
+  }
+
+});
+
+
+// ------------------------------------
+// PAGE HIDE / LEAVING WEBSITE
+// ------------------------------------
+
+window.addEventListener("pagehide", () => {
+
+  // Stop and reset music when leaving
+  // the actual webpage.
+
+  bgMusic.pause();
+  bgMusic.currentTime = 0;
+
+});
+
+
+// ------------------------------------
 // OPEN / CLOSE BUTTON
 // ------------------------------------
 
