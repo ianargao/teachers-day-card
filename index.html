@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="blossom" viewBox="-50 -50 100 100">
+        <g fill="#f6a0bc" stroke="#c4416d" stroke-width="2.5">
+          <ellipse cy="-24" rx="14" ry="22"/><ellipse cy="-24" rx="14" ry="22" transform="rotate(72)"/>
+          <ellipse cy="-24" rx="14" ry="22" transform="rotate(144)"/><ellipse cy="-24" rx="14" ry="22" transform="rotate(216)"/>
+          <ellipse cy="-24" rx="14" ry="22" transform="rotate(288)"/>
+        </g>
+        <circle r="9" fill="#e0527f"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="scene">
+
+    <main class="stage">
+      <section class="card" id="card" aria-label="Teacher's Day greeting card">
+        <div class="cover">
+          <svg class="blossom b1"><use href="#blossom"/></svg>
+          <svg class="blossom b2"><use href="#blossom"/></svg>
+          <p class="cover-script">Happy</p>
+          <h2>Teacher's Day</h2>
+          <p class="cover-sub">Thank you for teaching, guiding<br>and inspiring us.</p>
+        </div>
+
+        <div class="inside">
+          <div class="spread s1">
+          <div class="page left">
+            <div class="photo-frame">
+              <span class="tape"></span>
+              <img src="assets/teacher-photo.jpg" alt="Our teacher">
+              <svg class="ico photo-heart"><use href="#heart"/></svg>
+              <svg class="blossom b3"><use href="#blossom"/></svg>
+              <svg class="blossom b4"><use href="#blossom"/></svg>
+            </div>
+            <p class="caption">Happy Ma'am day, carmina D.! <svg class="ico"><use href="#heart"/></svg></p>
+          </div>
+
+          <div class="page right">
+            <svg class="blossom b5"><use href="#blossom"/></svg>
+            <h2>Happy<br>Teacher's Day!</h2>
+            <div class="message">
+              <p>Happy Ma'am Day, Carmina! &#9825; Gusto lang kita batiin, kaya ginawa ko talaga 'to para sa'yo lang.</p>
+              <p>Scan mo na lang yung QR, pangit kasi yung URL, masyadong mahaba hehe. Wala akong maisip na sasabihin, basta alam mo na kung ano yung mga gusto kong sabihin. Shy type lang talaga.</p>
+              <p>Saka sige na, babawasan ko na yung tubo ng utang mo hehe. Ayun, enjoy ka!</p>
+            </div>
+            <p class="brush">Thank you for being<br>an amazing teacher!</p>
+            <svg class="ico end-heart"><use href="#heart"/></svg>
+            <button class="page-btn next-btn" id="nextBtn">Next page &rsaquo;</button>
+          </div>
+          </div>
+          <div class="spread s2" aria-label="Photo memories">
+            <div class="page left gallery">
+              <button class="page-btn msg-btn" type="button">&lsaquo; Back to message</button>
+              <div class="grid">
+                <figure><img src="assets/photos/photo-1.jpg" alt="Memory 1"></figure>
+                <figure><img src="assets/photos/photo-2.jpg" alt="Memory 2"></figure>
+                <figure><img src="assets/photos/photo-3.jpg" alt="Memory 3"></figure>
+                <figure><img src="assets/photos/photo-4.jpg" alt="Memory 4"></figure>
+                <figure><img src="assets/photos/photo-5.jpg" alt="Memory 5"></figure>
+              </div>
+              <button class="page-btn back-btn" id="backBtn">&lsaquo; Back to message</button>
+            </div>
+            <div class="page right gallery">
+              <button class="page-btn msg-btn" type="button">&lsaquo; Back to message</button>
+              <div class="grid">
+                <figure><img src="assets/photos/photo-6.jpg" alt="Memory 6"></figure>
+                <figure><img src="assets/photos/photo-7.jpg" alt="Memory 7"></figure>
+                <figure><img src="assets/photos/photo-8.jpg" alt="Memory 8"></figure>
+                <figure><img src="assets/photos/photo-9.jpg" alt="Memory 9"></figure>
+                <figure><img src="assets/photos/photo-10.jpg" alt="Memory 10"></figure>
+              </div>
+            </div>
+          </div>
+          <div class="m-nav">
+            <button class="page-btn" id="mPrev" aria-label="Previous page">&lsaquo;</button>
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <button class="page-btn" id="mNext" aria-label="Next page">&rsaquo;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="open-btn" id="toggleBtn" aria-expanded="false"><svg class="ico"><use href="#heart"/></svg><span>Open Card</span></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
